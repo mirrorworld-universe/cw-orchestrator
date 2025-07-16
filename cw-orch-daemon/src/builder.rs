@@ -106,8 +106,9 @@ impl DaemonAsyncBuilder {
     /// Defaults to env variable.
     ///
     /// Variable: STATE_FILE_ENV_NAME.
-    #[allow(unused)]
-    pub(crate) fn state_path(&mut self, path: impl ToString) -> &mut Self {
+    // #[allow(unused)]
+    // pub(crate) fn state_path(&mut self, path: impl ToString) -> &mut Self {
+    pub fn state_path(&mut self, path: impl ToString) -> &mut Self {
         self.state_path = Some(path.to_string());
         self
     }
